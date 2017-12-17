@@ -1,0 +1,19 @@
+{
+  "name": "Ejemplo_Flux_React",
+  "dependencies": {
+    "babelify": "^8.0.0",
+    "browserify": "^14.5.0",
+    "jquery": "^3.2.1",
+    "react": "^15.0.2",
+    "react-dom": "^16.2.0",
+    "reflux": "^6.4.1"
+  },
+  "scripts": {
+    "build": "browserify -t babelify app.js > build.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babelify": "^8.0.0"
+  }
+}
