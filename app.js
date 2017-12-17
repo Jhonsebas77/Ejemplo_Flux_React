@@ -1,14 +1,15 @@
-/**
- * modules dependencia
+/*
+ *   Module dependencies
  */
 
- import React from 'react';
- import ImageGrid from './components/ImageGrid';
- import ImageActions from './actions/ImageActions';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ImageGrid from './components/ImageGrid';
+import ImageActions from './actions/ImageActions';
 
-setInterval(() => { ImageActions.fetchList(); }, 5000);
+setInterval( () => {
+    ImageActions.fetchList(),
+    console.log('fetcheando...')
+}, 5000);
 
- React.render.render(
-  <ImageGrid/>,
-  document.getElementById('container')
-)
+ReactDOM.render(<ImageGrid />, document.getElementById('container'))

@@ -1,0 +1,60 @@
+Este es un simple ejemplo de uso de reactJS + Flux para obtener datos de una API y
+presentarlos.
+
+Carga de entre varias categorías especificadas en el código imágenes de Flickr, refrescando cada 5sg.
+Al hacer click sobre alguna imagen, se abre nueva pestaña y redirige a Flickr.
+
+Para probarlo, simplemente abrir el index.html, que carga el build.js con el javascript necesario.
+
+Si lo editas, tienes que instalar las dependencias y transpilar de nuevo para generar el build.js:
+
+    $ npm install
+    $ npm run build
+
+Ya puedes abrir el index.html y ver los cambios.
+
+
+
+Notas:
+
+* verifica que tienes instaladas las dependencias antes de usarlas, los errores no son
+demasiado claros.
+
+* usa browserify, pero también tiene webpack, puede probar ambos.
+    - Ojo al build.js que carga el index.html, por defecto apunta al de browserify.
+    - Webpack lo pongo en public/bundle.js
+
+- browserify usa        $ npm run build
+    definido en package.json
+
+- webpack usa .babelrc y webpack.config.js además de tener instaladas las dependencias.
+
+            $ ./node_modules/.bin/webpack -d
+            $ ./node_modules/.bin/webpack -d --watch
+
+        O como los he metido en el package.json:
+
+            $ npm run buildwebpack
+            $ npm run dev
+
+P.d: Esta app corresponde al vídeo tutorial de Platzi: https://www.youtube.com/watch?v=D1gWyGWKjRY
+
+
+Patrones de Arquitectura con Flux y React.js para Front-End
+
+Usar API publicas para ver como es el funcionamiento
+
+Usamos JQuery para guardar los Store
+Importamos tambien  Broserfy
+
+npm install --save jquery
+npm install --save react reflux
+npm install --save browserify babelify
+npm install --save-dev babelify
+npm install babel-core babel-loader --save-dev
+npm i gulp-babel
+npm install --save react react-dom
+sudo npm install webpack -g
+
+npm run build
+open index.html
